@@ -5,6 +5,9 @@
     <Description>A simple file based json store for asp.net core web applications</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/ctorx/ctorx.JsonStore/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>2017 Matthew Marksbury, All RIghts Reserved</Copyright>
+    <PackageProjectUrl>https://github.com/ctorx/ctorx.JsonStore</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
