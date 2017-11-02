@@ -54,7 +54,7 @@ namespace ctorx.JsonStore
         /// <summary>
         /// Saves an item to the store
         /// </summary>
-        public void SaveItem(TStoreItem item)
+        public void Save(TStoreItem item)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
@@ -74,7 +74,7 @@ namespace ctorx.JsonStore
         /// <summary>
         /// Deletes an item from the store
         /// </summary>
-        public void DeleteItem(TStoreItem item)
+        public void Delete(TStoreItem item)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
