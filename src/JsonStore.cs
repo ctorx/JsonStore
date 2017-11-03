@@ -186,7 +186,7 @@ namespace ctorx.JsonStore
             try
             {
                 var encodedText = Encoding.UTF8.GetBytes(serialized);
-                using (FileStream sourceStream = new FileStream(this.FilePath, FileMode.Append, FileAccess.Write, FileShare.None, 4096, true))
+                using (FileStream sourceStream = new FileStream(this.FilePath, FileMode.Truncate, FileAccess.Write, FileShare.None, 4096, true))
                 {
                     await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
                 }
