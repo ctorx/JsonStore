@@ -68,7 +68,7 @@ namespace ctorx.JsonStore
                 int numRead;
                 while ((numRead = await sourceStream.ReadAsync(buffer, 0, buffer.Length)) != 0)
                 {
-                    var text = Encoding.Unicode.GetString(buffer, 0, numRead);
+                    var text = Encoding.UTF8.GetString(buffer, 0, numRead);
                     sb.Append(text);
                 }
 
@@ -185,7 +185,7 @@ namespace ctorx.JsonStore
             await Mutex.WaitAsync();
             try
             {
-                var encodedText = Encoding.Unicode.GetBytes(serialized);
+                var encodedText = Encoding.UTF8.GetBytes(serialized);
                 using (FileStream sourceStream = new FileStream(this.FilePath, FileMode.Append, FileAccess.Write, FileShare.None, 4096, true))
                 {
                     await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
